@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import { useState } from 'react';
+import { useState } from "react";
 
 interface Question {
   question: string;
@@ -44,14 +44,18 @@ const Quiz = () => {
     <div className="flex flex-col items-center justify-center min-h-screen bg-green-100">
       {showResult ? (
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-green-600">Quiz Finalizado!</h2>
+          <h2 className="text-3xl font-bold text-green-600">
+            Quiz Finalizado!
+          </h2>
           <p className="mt-4 text-xl text-gray-700">
             Sua pontuação: {score} de {questions.length}
           </p>
         </div>
       ) : (
         <div className="text-center">
-          <h2 className="text-2xl font-bold text-green-600">{questions[currentQuestion].question}</h2>
+          <h2 className="text-2xl font-bold text-green-600">
+            {questions[currentQuestion].question}
+          </h2>
           <div className="mt-6 space-y-4">
             {questions[currentQuestion].options.map((option) => (
               <button
